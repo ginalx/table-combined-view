@@ -1,0 +1,8 @@
+<table>
+  <tr>
+    <th *ngFor="let column of columns">{{ column.header }}</th>
+  </tr>
+  <tr *ngFor="let row of data$ | async">
+    <td *ngFor="let column of columns">{{ row[column.field] }}</td>
+  </tr>
+</table>
